@@ -1,0 +1,14 @@
+
+
+<h3>New Post!</h3>
+ 
+<%= form_for(@post) do |f| %>
+  <label>Title:</label><br>
+  <%= f.text_field :title %><br>
+    <label>Category:</label><br>
+  <%= f.text_field :category %><br>
+  <label>Content:</label><br>
+  <%= f.text_area :content %><br>
+  <%= f.submit %>
+
+<% end %>
