@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def update
-  
+    
     if @post.update(post_params)
         redirect_to post_path(@post)
     else 
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:title, :category, :content)
+    params.require(:post).permit(:title, :category, :content)
   end
 
   def set_post!
